@@ -1,1 +1,57 @@
 // Navigation code here
+.main-navigation {
+    width: 100%;
+    height: 90px;
+    background: @nav-bg;
+    border-bottom: 1px solid @nav-border;
+    &:hover {
+        .gradient();
+    }
+
+    .nav-container {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        // border: 1px solid black;
+
+        .logo-heading {
+            font-size: 3.7rem;
+            color: @header-font-color;
+            &:hover{
+                -webkit-transform: scale(1.3);
+                -ms-transform: scale(1.3);
+                transform: scale(1.3);
+            }
+            @media @mobile {
+                font-size: 3rem;
+            }
+
+        }//logo
+
+        .nav {
+            width: 350px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            @media @mobile {
+                width: 100%;
+            }
+
+            a {
+                font-size: 1.6rem;
+                text-decoration: none;
+                color: @nav-font;
+                &:hover {
+                    font-style: italic;
+                    font-weight: bolder;
+                }
+                @media @mobile {
+                    font-size: 1.5rem;
+                }
+            }//a
+
+        }//nav
+    }//nav-container
+}//main-navigation
