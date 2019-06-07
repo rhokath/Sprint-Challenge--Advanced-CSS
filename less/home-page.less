@@ -4,6 +4,9 @@
 
   .intro {
     border: 1px solid black;
+    @media @mobile {
+      margin-bottom: .5rem;
+    }
 
     .header-img {
       width: 100%;
@@ -26,6 +29,9 @@
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+    @media @mobile {
+      border: 1px solid red;
+    }
 
    .sky {
      @media @mobile {
@@ -45,6 +51,7 @@
       height: 100%;
       @media @mobile {
         width: 100%;
+        margin: .5rem 2.5%;
       }//media
   
       }//img
@@ -53,6 +60,10 @@
 
   .visit-planets {
     padding: 15px;
+    @media @mobile {
+      border: 1px solid blue;
+      padding: none;
+    }
 
     h3 {
       margin-top: 11px;
@@ -72,6 +83,7 @@
     @media @mobile {
       flex-direction: column-reverse;
       width: 100%;
+      margin-top: .05rem;
       border: 1px solid red;
       // padding: none;
       flex-wrap: wrap;
