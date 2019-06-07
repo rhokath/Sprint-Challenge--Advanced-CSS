@@ -3,41 +3,65 @@
 .home {
 
   .intro {
+    border: 1px solid black;
+
+    .header-img {
+      width: 100%;
+      height: auto;
+      border-radius: .5rem;
+    }//header-img
 
     h2 {
       padding: 15px;
-    }
+
+    }//h2
 
     p {
       padding:0 15px;
-    }
+    }//p
   
-  }
+  }//intro
 
   .space-images {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
 
+   .sky {
+     @media @mobile {
+       display: none;
+     }
+   }
+   .launch {
+     @media @mobile {
+       display: none;
+     }
+   }
+
     img {
       width: 28%;
       margin: 20px 2.5%;
       border-radius: 20px;
       height: 100%;
-    }
-  }
+      @media @mobile {
+        width: 100%;
+      }//media
+  
+      }//img
+  }//space-imgs
+  
 
   .visit-planets {
     padding: 15px;
 
     h3 {
       margin-top: 11px;
-    }
+    }//h3
 
     p {
       margin-top: 13px;
-    }
-  }
+    }//p
+  }//visit-planets
 
   .walk {
     margin-top: 60px;
@@ -45,31 +69,54 @@
     padding: 50px 60px;
     display: flex;
     justify-content: center;
+    @media @mobile {
+      flex-direction: column-reverse;
+      width: 100%;
+      border: 1px solid red;
+      // padding: none;
+      flex-wrap: wrap;
+      padding: 1rem .5rem;
+    }
 
     .walk-text {
       width: 50%;
+      @media @mobile {
+        width: 100%;
+        border: 1px solid black;
+        order: 1;
+      }
 
       h3 {
         margin-bottom: 10px;
-      }
+      }//h3
 
       p {
         margin-bottom: 26px;
-      }
+        @media @mobile {
+          margin-bottom: 2rem;
+        }
+      }//p
 
       .btn {
-      }
-    }
+        .custom-btn ();
+      }//btn
+    }//walk-text
 
     .walk-img {
       width: 46%;
       margin-left: 4%;
+      @media @mobile {
+        width: 100%;
+        order: 2;
+        margin: 0 auto;
+        padding-bottom: .5rem;
+      }
       
       img {
         width: 100%;
         height: auto;
         border-radius: 10px;
-      }
-    }
-  }
+      }//img
+    }//walk-img
+  }//walk
 }// home
